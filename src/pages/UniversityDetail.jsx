@@ -44,11 +44,6 @@ const UniversityDetail = () => {
 
 
 
-
-
-            {/* Introduction Section */}
-
-
             <div className="flex flex-col md:flex-row gap-8 md:gap-10 items-start">
 
 
@@ -91,11 +86,6 @@ const UniversityDetail = () => {
 
 
 
-
-
-            {/* Campus Section */}
-
-
             <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-7">
 
                 Campuses:
@@ -132,7 +122,7 @@ const UniversityDetail = () => {
 
 
 
-            {/* Address */}
+    
 
 
             <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-7">
@@ -154,7 +144,7 @@ const UniversityDetail = () => {
                 {university.address}
 
             </p>
-                        {/* Best Programs */}
+
 
 
             <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-7">
@@ -195,7 +185,7 @@ const UniversityDetail = () => {
 
 
 
-            {/* Undergraduate Programs */}
+        
 
 
 
@@ -288,13 +278,6 @@ const UniversityDetail = () => {
 
 
 
-
-
-
-            {/* Graduate Programs */}
-
-
-
             <div>
 
 
@@ -379,7 +362,7 @@ const UniversityDetail = () => {
 
 
             </div>
-                        {/* Fee Structure */}
+                
 
 
             <div>
@@ -503,15 +486,6 @@ const UniversityDetail = () => {
 
 
 
-
-
-
-
-            {/* Scholarships */}
-
-
-
-
             <div>
 
 
@@ -586,15 +560,6 @@ const UniversityDetail = () => {
 
 
 
-
-
-
-
-            {/* Facilities */}
-
-
-
-
             <div>
 
 
@@ -658,7 +623,7 @@ const UniversityDetail = () => {
 
 
             </div>
-                        {/* Contact */}
+                
 
 
             <div>

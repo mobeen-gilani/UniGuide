@@ -49,7 +49,7 @@ export default function About() {
 
 
 
-            {/* Mission Section */}
+            
 
             <section className="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-10">
 
@@ -74,7 +74,7 @@ export default function About() {
                 </div>
 
             </section>
-                        {/* Features Section */}
+                        
 
             <section className="max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-16">
 
@@ -88,7 +88,7 @@ export default function About() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
 
 
-                    {/* Card 1 */}
+                    
 
                     <div className="bg-white rounded-3xl shadow-lg p-6 md:p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
 
@@ -108,7 +108,7 @@ export default function About() {
 
 
 
-                    {/* Card 2 */}
+                
 
                     <div className="bg-white rounded-3xl shadow-lg p-6 md:p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
 
@@ -128,7 +128,7 @@ export default function About() {
 
 
 
-                    {/* Card 3 */}
+                
 
                     <div className="bg-white rounded-3xl shadow-lg p-6 md:p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
 
@@ -148,7 +148,7 @@ export default function About() {
 
 
 
-                    {/* Card 4 */}
+                    
 
                     <div className="bg-white rounded-3xl shadow-lg p-6 md:p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
 
@@ -174,7 +174,7 @@ export default function About() {
 
 
 
-            {/* Why Choose UniGuide */}
+            
 
             <section className="max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-16">
 
@@ -244,7 +244,7 @@ export default function About() {
 
 
             </section>
-                        {/* Statistics Section */}
+                        
 
             <section className="max-w-6xl mx-auto px-4 md:px-6 py-12 md:py-16">
 
@@ -318,7 +318,7 @@ export default function About() {
 
 
 
-            {/* Call To Action */}
+        
 
             <section className="max-w-6xl mx-auto px-4 md:px-6 pb-12 md:pb-20">
 

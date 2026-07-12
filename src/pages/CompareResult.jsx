@@ -344,7 +344,7 @@ const CompareResult = () => {
 
 
 
-                        {/* University B */}
+                        
 
 
                         <div className="shadow-lg rounded-xl border border-slate-200">

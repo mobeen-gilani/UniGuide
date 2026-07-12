@@ -149,7 +149,7 @@ export default function Rankings() {
 
 
                 </div>
-                                {/* Cards */}
+                            
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8 mt-10 md:mt-12">
 
@@ -163,7 +163,7 @@ export default function Rankings() {
                         >
 
 
-                            {/* Top Badge */}
+                        
 
                             <span className="absolute top-4 right-4 md:top-5 md:right-5 bg-slate-700 text-white text-xs px-3 py-1 rounded-full">
                                 Top 10
@@ -171,7 +171,7 @@ export default function Rankings() {
 
 
 
-                            {/* Icon */}
+                            
 
                             <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-slate-100 flex items-center justify-center text-3xl md:text-4xl">
 
@@ -181,7 +181,7 @@ export default function Rankings() {
 
 
 
-                            {/* Title */}
+                            
 
                             <h2 className="text-xl md:text-2xl font-bold mt-5 md:mt-6">
 
@@ -200,7 +200,7 @@ export default function Rankings() {
 
 
 
-                            {/* Bottom */}
+                            
 
                             <div className="mt-6 md:mt-8 flex justify-between items-center">
 

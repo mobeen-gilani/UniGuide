@@ -234,7 +234,7 @@ export default function RankingList() {
 
 
 
-                {/* Breadcrumb */}
+              
 
                 <p className="text-sm text-gray-500">
 
@@ -253,7 +253,7 @@ export default function RankingList() {
 
 
 
-                {/* Heading */}
+          
 
                 <h1 className="text-3xl md:text-5xl font-bold mt-4">
 
@@ -274,7 +274,7 @@ export default function RankingList() {
 
 
 
-                {/* Universities Cards */}
+          
 
 
                 <div className="mt-10 space-y-6">
@@ -340,7 +340,7 @@ export default function RankingList() {
 
 
 
-                                        {/* Top Section */}
+                                      
 
 
                                         <div className="
@@ -418,7 +418,7 @@ export default function RankingList() {
 
 
 
-                                        {/* Details */}
+                                      
 
 
                                         <div className="

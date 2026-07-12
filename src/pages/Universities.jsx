@@ -121,7 +121,7 @@ const Cards = () => {
 
 
 
-            {/* Search Section */}
+
 
             <div className="flex flex-col md:flex-row items-center pt-8 gap-5 mx-4 md:mx-13">
 
@@ -133,14 +133,14 @@ const Cards = () => {
 
                     value={searchText}
 
-                    onChange={(e) => 
+                    onChange={(e) =>
                         setSearchText(e.target.value)
                     }
 
 
                     onKeyDown={(e) => {
 
-                        if(e.key === "Enter")
+                        if (e.key === "Enter")
                             setSearch(searchText);
 
                     }}
@@ -161,7 +161,7 @@ const Cards = () => {
 
 
             </div>
-                        {/* Filters Section */}
+
 
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 mx-4 md:mx-13 mt-6">
 
@@ -293,7 +293,7 @@ const Cards = () => {
 
 
 
-            {/* Heading */}
+
 
             <div className="flex justify-between items-center w-full px-4 md:px-13">
 
@@ -306,7 +306,7 @@ const Cards = () => {
 
 
             </div>
-                        {/* University Cards */}
+
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 md:px-0">
 

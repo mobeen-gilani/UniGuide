@@ -33,7 +33,7 @@ const Cards = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
 
-                                        {/* FAST */}
+                                        
                     <Link to="/university/1">
                         <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden cursor-pointer hover:-translate-y-2 h-full flex flex-col">
 
@@ -88,7 +88,7 @@ const Cards = () => {
                         </div>
                     </Link>
 
-                                        {/* NUST */}
+                                    
                     <Link to="/university/2">
 
                         <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden cursor-pointer hover:-translate-y-2 h-full flex flex-col">
@@ -129,7 +129,7 @@ const Cards = () => {
                         </div>
                     </Link>
 
-                    {/* Aga Khan */}
+                
                     <Link to="/university/15">
 
                         <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden cursor-pointer hover:-translate-y-2 h-full flex flex-col">
@@ -170,7 +170,7 @@ const Cards = () => {
                         </div>
                     </Link>
 
-                                        {/* LUMS */}
+                            
                     <Link to="/university/4">
 
                         <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden cursor-pointer hover:-translate-y-2 h-full flex flex-col">

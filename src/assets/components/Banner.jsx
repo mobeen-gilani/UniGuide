@@ -11,7 +11,7 @@ const Banner = () => {
             }}
         >
 
-            {/* Hero Text */}
+          
             <div className="flex flex-col items-center py-10 max-md:px-5">
 
                 <h1 className="py-4 text-5xl max-md:text-3xl text-white font-bold text-center">
@@ -45,7 +45,7 @@ const Banner = () => {
             </div>
 
             
-                {/* Cards */}
+               
                 <div
                     className="
                 landcard
@@ -57,7 +57,7 @@ const Banner = () => {
                 "
                 >
 
-                    {/* Card 1 */}
+                    
                     <div className="
                 mx-17 shadow-lg border-2 border-slate-800 mt-10
                 card1 bg-white w-60 h-50 rounded-3xl py-12 px-8
@@ -82,7 +82,7 @@ const Banner = () => {
 
                     </div>
 
-                    {/* Card 2 */}
+                   
                     <div className="
                 mx-17 shadow-lg border-2 border-slate-800 mt-10
                 card2 bg-white w-60 h-50 rounded-3xl py-12 px-8
@@ -107,7 +107,7 @@ const Banner = () => {
 
                     </div>
 
-                    {/* Card 3 */}
+                   
                     <div className="
                 mx-17 shadow-lg border-2 border-slate-800 mt-10
                 card3 bg-white w-60 h-50 rounded-3xl py-12 px-8
@@ -132,7 +132,7 @@ const Banner = () => {
 
                     </div>
 
-                    {/* Card 4 */}
+                    
                     <div className="
                mx-17 shadow-lg border-2 border-slate-800 mt-10
                 card4 bg-white w-60 h-50 rounded-3xl py-12 px-8

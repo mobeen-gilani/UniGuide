@@ -1,6 +1,8 @@
+
+
+
 import React from "react";
 import { useParams } from "react-router-dom";
-
 const rankings = {
    "computer-science": [
     { rank: 1, university: "FAST National University", city: "Islamabad", sector: "Private" },
@@ -160,143 +162,351 @@ const rankings = {
 
 };
 
+
+
+
+
 function getBadge(rank) {
-  if (rank === 1)
+
+    if (rank === 1) {
+
+        return {
+            emoji: "🥇",
+            border: "border-yellow-400",
+            bg: "bg-yellow-50",
+        };
+
+    }
+
+
+    if (rank === 2) {
+
+        return {
+            emoji: "🥈",
+            border: "border-gray-400",
+            bg: "bg-gray-50",
+        };
+
+    }
+
+
+    if (rank === 3) {
+
+        return {
+            emoji: "🥉",
+            border: "border-orange-400",
+            bg: "bg-orange-50",
+        };
+
+    }
+
+
     return {
-      emoji: "🥇",
-      border: "border-slate-500",
-      bg: "bg-slate-200",
+
+        emoji: "🏅",
+        border: "border-slate-300",
+        bg: "bg-white",
+
     };
 
-  if (rank === 2)
-    return {
-      emoji: "🥈",
-      border: "border-slate-500",
-      bg: "bg-slate-200",
-    };
-
-  if (rank === 3)
-    return {
-      emoji: "🥉",
-      border: "border-slate-500",
-      bg: "bg-slate-200",
-    };
-
-  return {
-    emoji: "🏅",
-    border: "border-slate-500",
-    bg: "bg-white",
-  };
 }
-
 export default function RankingList() {
-  const { program } = useParams();
 
-  const universities = rankings[program] || [];
+    const { program } = useParams();
 
-  const title = program
-    ? program.replaceAll("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())
-    : "Rankings";
 
-  return (
-    <div className="bg-gray-50 min-h-screen mt-10">
-      <div className="max-w-6xl mx-auto px-6 py-12">
+    const universities = rankings[program] || [];
 
-        <p className="text-sm text-gray-500">
-          Home <span className="mx-2">›</span>
-          Rankings <span className="mx-2">›</span>
-          {title}
-        </p>
 
-        <h1 className="text-5xl font-bold mt-4">
-          Top Ranked <span>{title}</span> Universities
-        </h1>
 
-        <p className="text-gray-600 mt-3">
-          Explore Pakistan's leading universities for {title}.
-        </p>
+    const title = program
+        ? program.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())
+        : "Rankings";
 
-        <div className="mt-10 space-y-6">
 
-          {universities.length === 0 ? (
-            <div className="bg-white rounded-2xl p-10 text-center shadow">
-              <h2 className="text-2xl font-bold">
-                No Rankings Available
-              </h2>
 
-              <p className="text-gray-500 mt-3">
-                Rankings for this program will be added soon.
-              </p>
-            </div>
-          ) : (
-            universities.map((uni) => {
-              const badge = getBadge(uni.rank);
+    return (
 
-              return (
-                <div
-                  key={uni.rank}
-                  className={`${badge.bg} ${badge.border} border-l-8 rounded-3xl shadow-md p-7 hover:shadow-xl transition duration-300`}
-                >
-                  <div className="flex justify-between items-center">
+        <div className="bg-gray-50 min-h-screen mt-10">
 
-                    <div className="flex items-center gap-5">
 
-                      <div className="text-5xl">
-                        {badge.emoji}
-                      </div>
+            <div className="max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-12">
 
-                      <div>
 
-                        <h2 className="text-2xl font-bold">
-                          {uni.university}
-                        </h2>
 
-                        <p className="text-gray-500">
-                          Rank #{uni.rank}
-                        </p>
+                {/* Breadcrumb */}
 
-                      </div>
+                <p className="text-sm text-gray-500">
 
-                    </div>
+                    Home 
+                    <span className="mx-2">›</span>
 
-                    <span className="bg-slate-700 text-white px-4 py-2 rounded-full text-sm">
-                      Top Ranked
-                    </span>
+                    Rankings
 
-                  </div>
+                    <span className="mx-2">›</span>
 
-                  <div className="flex gap-16 mt-8">
+                    {title}
 
-                    <div>
-                      <p className="text-gray-400 text-sm">
-                        City
-                      </p>
+                </p>
 
-                      <h3 className="font-semibold text-lg">
-                        📍 {uni.city}
-                      </h3>
-                    </div>
 
-                    <div>
-                      <p className="text-gray-400 text-sm">
-                        Sector
-                      </p>
 
-                      <h3 className="font-semibold text-lg">
-                        🏛 {uni.sector}
-                      </h3>
-                    </div>
 
-                  </div>
+
+                {/* Heading */}
+
+                <h1 className="text-3xl md:text-5xl font-bold mt-4">
+
+                    Top Ranked {title} Universities
+
+                </h1>
+
+
+
+                <p className="text-gray-600 mt-3 text-base md:text-lg">
+
+                    Explore Pakistan's leading universities for {title}.
+
+                </p>
+
+
+
+
+
+
+                {/* Universities Cards */}
+
+
+                <div className="mt-10 space-y-6">
+
+
+
+                    {
+                        universities.length === 0 ? (
+
+                            <div className="bg-white rounded-2xl p-10 text-center shadow">
+
+
+                                <h2 className="text-2xl font-bold">
+
+                                    No Rankings Available
+
+                                </h2>
+
+
+
+                                <p className="text-gray-500 mt-3">
+
+                                    Rankings for this program will be added soon.
+
+                                </p>
+
+
+                            </div>
+
+
+                        ) : (
+
+
+
+                            universities.map((uni) => {
+
+
+                                const badge = getBadge(uni.rank);
+
+
+
+                                return (
+
+
+                                    <div
+
+                                        key={uni.rank}
+
+                                        className={`
+                                            ${badge.bg}
+                                            ${badge.border}
+                                            border-l-8
+                                            rounded-3xl
+                                            shadow-md
+                                            p-5 md:p-7
+                                            hover:shadow-xl
+                                            transition
+                                            duration-300
+                                        `}
+
+                                    >
+
+
+
+
+                                        {/* Top Section */}
+
+
+                                        <div className="
+                                            flex 
+                                            flex-col 
+                                            md:flex-row
+                                            md:justify-between
+                                            md:items-center
+                                            gap-4
+                                        ">
+
+
+
+                                            <div className="flex items-center gap-5">
+
+
+                                                <div className="text-4xl md:text-5xl">
+
+                                                    {badge.emoji}
+
+                                                </div>
+
+
+
+
+                                                <div>
+
+
+                                                    <h2 className="text-xl md:text-2xl font-bold">
+
+                                                        {uni.university}
+
+                                                    </h2>
+
+
+
+                                                    <p className="text-gray-500">
+
+                                                        Rank #{uni.rank}
+
+                                                    </p>
+
+
+                                                </div>
+
+
+
+                                            </div>
+
+
+
+
+
+
+                                            <span className="
+                                                bg-slate-700
+                                                text-white
+                                                px-4
+                                                py-2
+                                                rounded-full
+                                                text-sm
+                                                w-fit
+                                            ">
+
+                                                Top Ranked
+
+                                            </span>
+
+
+
+                                        </div>
+
+
+
+
+
+
+                                        {/* Details */}
+
+
+                                        <div className="
+                                            flex
+                                            flex-col
+                                            md:flex-row
+                                            gap-6
+                                            md:gap-16
+                                            mt-8
+                                        ">
+
+
+
+                                            <div>
+
+
+                                                <p className="text-gray-400 text-sm">
+
+                                                    City
+
+                                                </p>
+
+
+
+                                                <h3 className="font-semibold text-lg">
+
+                                                    📍 {uni.city}
+
+                                                </h3>
+
+
+                                            </div>
+
+
+
+
+
+
+                                            <div>
+
+
+                                                <p className="text-gray-400 text-sm">
+
+                                                    Sector
+
+                                                </p>
+
+
+
+                                                <h3 className="font-semibold text-lg">
+
+                                                    🏛 {uni.sector}
+
+                                                </h3>
+
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                );
+
+                            })
+
+                        )
+                    }
+
+
+
 
                 </div>
-              );
-            })
-          )}
+
+
+
+
+            </div>
+
 
         </div>
 
-      </div>
-    </div>
-  );
+
+    );
+
 }

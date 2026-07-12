@@ -1,3 +1,8 @@
+
+
+
+
+
 import React, { useState } from "react";
 import Select from "react-select";
 import UniversityDetails from "../../data/UniversityDetail";
@@ -10,13 +15,11 @@ const Compare = () => {
     const [uniB, setUniB] = useState(null);
     const [compare, setCompare] = useState(false);
 
-    // Dropdown options automatically data se banengi
     const universityOptions = UniversityDetails.map((uni) => ({
         value: uni.name,
         label: uni.name,
     }));
 
-    // Selected universities ka poora data
     const universityA = UniversityDetails.find(
         (uni) => uni.name === uniA?.value
     );
@@ -50,7 +53,6 @@ const Compare = () => {
             fontSize: "14px",
             fontWeight: 500,
         }),
-
         menu: (provided) => ({
             ...provided,
             borderRadius: "12px",
@@ -95,20 +97,20 @@ const Compare = () => {
     };
 
     return (
-        <div className="mx-15 mb-5">
+        <div className="mx-5 md:mx-15 mb-5">
 
             <h1 className="text-3xl font-bold">
                 Compare Universities
             </h1>
 
-            <div className="flex items-end gap-10">
+            <div className="flex flex-col md:flex-row md:items-end gap-6 md:gap-10">
 
                 <div className="flex flex-col">
                     <h2 className="text-sm font-bold mt-10">
                         Select University A
                     </h2>
 
-                    <div className="w-90">
+                    <div className="w-full md:w-90">
                         <Select
                             options={universityOptions}
                             value={uniA}
@@ -120,12 +122,13 @@ const Compare = () => {
                     </div>
                 </div>
 
+
                 <div className="flex flex-col">
-                    <h2 className="text-sm font-bold">
+                    <h2 className="text-sm font-bold md:mt-10">
                         Select University B
                     </h2>
 
-                    <div className="w-90">
+                    <div className="w-full md:w-90">
                         <Select
                             options={universityOptions}
                             value={uniB}
@@ -137,7 +140,8 @@ const Compare = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-end">
+
+                <div className="flex flex-col justify-end md:mb-0">
                     <button
                         onClick={() => {
 
@@ -158,18 +162,16 @@ const Compare = () => {
                                 }
                             });
                         }}
-                        className="cursor-pointer hover:font-bold transition-all py-3 px-8 bg-slate-800 rounded-2xl text-white"
+                        className="cursor-pointer hover:font-bold transition-all py-3 px-8 bg-slate-800 rounded-2xl text-white w-full md:w-auto"
                     >
                         Compare
                     </button>
                 </div>
 
             </div>
-
-
-
-
         </div>
+
+        
     );
 };
 

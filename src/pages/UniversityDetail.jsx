@@ -3,13 +3,13 @@
 
 import React from "react";
 import { useParams } from "react-router-dom";
-import universityDetails from "../data/universityDetail";
+import UniversityDetails from "../data/UniversityDetail";
 
 const UniversityDetail = () => {
 
     const { id } = useParams();
 
-    const university = universityDetails.find(
+    const university = UniversityDetails.find(
         (uni) => uni.id === Number(id)
     );
 

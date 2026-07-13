@@ -50,10 +50,11 @@ const Banner = () => {
                     className="
                 landcard
                 flex
-                shadow-md
+                shadow-md 
                 max-md:flex-wrap
                 max-md:justify-center
                 max-md:gap-5
+                
                 "
                 >
 

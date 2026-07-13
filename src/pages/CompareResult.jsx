@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import { useLocation } from "react-router-dom";
 
@@ -10,7 +9,6 @@ const CompareResult = () => {
     const universityA = state?.universityA;
     const universityB = state?.universityB;
 
-
     if (!universityA || !universityB) {
         return (
             <h1 className="text-2xl text-center mt-10">
@@ -19,123 +17,79 @@ const CompareResult = () => {
         );
     }
 
-
     return (
 
-        <div className="px-4 md:px-8 mb-10">
+        <div className="bg-slate-100 min-h-screen py-10 px-3 mt-18 md:px-8">
 
-            {universityA && universityB && (
+            <div className="max-w-7xl mx-auto">
 
-                <div className="mt-10 p-4 md:p-8 rounded-2xl bg-white">
-
-
-                    <h2 className="text-3xl md:text-4xl font-bold mb-8 mt-5 md:mt-10">
-                        Universities Comparison
-                    </h2>
+                <h1 className="text-2xl md:text-5xl font-bold text-center mb-10">
+                    Universities Comparison
+                </h1>
+                <div className="grid grid-cols-2 gap-3 md:gap-8 items-start">
 
 
+                    <div className="bg-white rounded-2xl shadow-xl overflow-hidden border">
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+                        <img
+                            src={universityA.image}
+                            alt={universityA.name}
+                            className="w-full h-40 md:h-80 object-cover"
+                        />
 
+                        <div className="p-6">
 
-                        <div className="shadow-lg rounded-xl border border-slate-200">
+                            <h2 className="text-xl md:text-2xl font-bold text-center">
+                                {universityA.name}
+                            </h2>
 
+                            <hr className="my-4 md:my-6" />
 
-                            <img
-                                src={universityA.image}
-                                alt={universityA.name}
-                                className="h-60 md:h-80 w-full object-cover rounded-xl"
-                            />
+                            <div>
 
+                                <h3 className="md:text-xl font-bold mb-3">
+                                    Campus
+                                </h3>
 
-                            <div className="p-4 md:p-6 space-y-8">
-                                                                <h2 className="font-bold text-xl md:text-2xl mt-6">
-                                    {universityA.name}
-                                </h2>
+                                <ul className="list-disc text-sm md:text-lg ml-6 space-y-2">
 
+                                    {universityA.campus.map((campus, index) => (
+                                        <li key={index}>
+                                            {campus}
+                                        </li>
+                                    ))}
 
-                                <p className="mt-4">
-                                    {universityA.introduction}
-                                </p>
+                                </ul>
 
+                            </div>
 
-                                <hr className="my-4 border-slate-300" />
-
-
-
-                                <div className="mt-6">
-
-                                    <h3 className="font-bold text-lg md:text-xl mb-2">
-                                        Campus
-                                    </h3>
-
-
-                                    <ul className="list-disc ml-5 md:ml-6 space-y-2">
-
-                                        {universityA.campus.map((campus, index) => (
-                                            <li key={index}>
-                                                {campus}
-                                            </li>
-                                        ))}
-
-                                    </ul>
-
-                                </div>
+                            <hr className="my-4 md:my-6" />
 
 
+                            <div>
 
-                                <hr className="my-4 border-slate-300" />
+                                <h3 className="text-xl font-bold mb-5">
+                                    Fee Structure
+                                </h3>
 
-
-
-                                <div className="mt-6">
-
-                                    <h3 className="font-bold text-lg md:text-xl mb-2">
-                                        Address
-                                    </h3>
-
-
-                                    <ul className="list-disc ml-5 md:ml-6 space-y-2">
-
-                                        {universityA.address.map((address, index) => (
-                                            <li key={index}>
-                                                {address}
-                                            </li>
-                                        ))}
-
-                                    </ul>
-
-                                </div>
-
-
-
-                                <hr className="my-4 border-slate-300" />
-
-
-
-                                <div className="mt-3">
-
-                                    <strong className="text-lg md:text-xl">
-                                        Fee:
-                                    </strong>
-
+                                <div className="space-y-2 md:space-y-4">
 
                                     {universityA.fee.map((item, index) => (
 
-                                        <div 
+                                        <div
                                             key={index}
-                                            className="ml-2 md:ml-4 mt-4 border rounded-lg p-3 md:p-4"
+                                            className="border rounded-xl p-2 md:p-4 bg-slate-50"
                                         >
 
-                                            <p className="font-bold">
+                                            <p className="font-bold md:text-lg">
                                                 {item.category}
                                             </p>
 
-                                            <p>
+                                            <p className="mt-2 text-sm md:text-lg">
                                                 {item.amount}
                                             </p>
 
-                                            <p className="text-sm">
+                                            <p className="text-xs md:text-sm text-slate-600 mt-2">
                                                 {item.note}
                                             </p>
 
@@ -145,87 +99,91 @@ const CompareResult = () => {
 
                                 </div>
 
+                            </div>
 
+                            <hr className="my-4 md:my-6" />
 
-                                <hr className="my-4 border-slate-300" />
+                            <div>
 
+                                <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-5">
+                                    Scholarships
+                                </h3>
 
-
-                                <div className="mt-3">
-
-                                    <strong className="text-lg md:text-xl">
-                                        Scholarships
-                                    </strong>
-
+                                <div className="space-y-3 md:space-y-6">
 
                                     {universityA.scholarship.map((item, index) => (
 
-                                        <div key={index} className="mt-4 mb-10">
+                                        <div
+                                            key={index}
+                                            className="border rounded-xl p-3 md:p-4 bg-slate-50"
+                                        >
 
-
-                                            <h3 className="font-bold mb-2">
+                                            <h4 className="font-bold text-sm md:text-lg mb-2">
                                                 {item.title}
-                                            </h3>
+                                            </h4>
 
-
-                                            <p className="mb-2">
+                                            <p className="md:mb-2 text-xs md:text-lg">
                                                 {item.description}
                                             </p>
 
-
-                                            <p>
-                                                {item.benefit}
-                                            </p>
-
-
                                         </div>
 
                                     ))}
 
                                 </div>
 
+                            </div>
 
+                            <hr className="my-4 md:my-6" />
+                            <div>
 
-                                <hr className="my-4 border-slate-300" />
-                                                                <p className="font-bold mt-5 text-lg md:text-xl">
+                                <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4">
                                     Best Programs
-                                </p>
+                                </h3>
 
-                                <ul className="list-disc ml-5">
+                                <ul className="md:text-lg text-sm list-disc ml-6 space-y-2">
+
                                     {universityA.bestPrograms.map((program, index) => (
+
                                         <li key={index}>
                                             {program}
                                         </li>
+
                                     ))}
+
                                 </ul>
 
+                            </div>
 
-                                <hr className="my-4 border-slate-300" />
+                            <hr className="my-4 md:my-6" />
 
+                            <div>
 
+                                <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-5">
+                                    Undergraduate Programs
+                                </h3>
 
-                                <p className="font-bold mt-5 text-lg md:text-xl">
-                                    Undergraduate
-                                </p>
-
-
-                                <div>
+                                <div className="space-y-3 md:space-y-6">
 
                                     {universityA.undergraduate.map((item, index) => (
 
-                                        <div key={index} className="mb-8">
+                                        <div
+                                            key={index}
+                                            className="border rounded-xl p-2 md:p-4 bg-slate-50"
+                                        >
 
-                                            <h3 className="font-bold">
+                                            <h4 className="font-bold md:text-lg mb-3">
                                                 {item.heading}
-                                            </h3>
+                                            </h4>
 
-
-                                            <ul className="list-disc ml-6 mt-2 space-y-2">
+                                            <ul className="list-disc text-sm md:text-lg ml-5 md:ml-6 space-y-2">
 
                                                 {item.programs.map((program, i) => (
+
                                                     <li key={i}>
                                                         {program}
                                                     </li>
+
                                                 ))}
 
                                             </ul>
@@ -236,215 +194,153 @@ const CompareResult = () => {
 
                                 </div>
 
+                            </div>
 
-                                <hr className="my-4 border-slate-300" />
+                            <hr className="my-4 md:my-6" />
 
+                            <div>
 
+                                <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-5">
+                                    Graduate Programs
+                                </h3>
 
-                                <p className="font-bold mt-5 text-lg md:text-xl">
-                                    Graduate
-                                </p>
-
-
-                                <div>
+                                <div className="space-y-3 md:space-y-6">
 
                                     {universityA.graduate.map((item, index) => (
 
-                                        <div key={index} className="mb-6">
+                                        <div
+                                            key={index}
+                                            className="border rounded-xl p-2 md:p-4 bg-slate-50"
+                                        >
 
-                                            <h3 className="font-bold">
+                                            <h4 className="font-bold md:text-lg mb-3">
                                                 {item.heading}
-                                            </h3>
+                                            </h4>
 
-
-                                            <ul className="list-disc ml-5 mt-2">
+                                            <ul className="list-disc text-sm md:text-lg ml-5 md:ml-6 space-y-2">
 
                                                 {item.programs.map((program, i) => (
+
                                                     <li key={i}>
                                                         {program}
                                                     </li>
+
                                                 ))}
 
                                             </ul>
 
                                         </div>
-
                                     ))}
 
                                 </div>
 
+                            </div>
 
+                            <hr className="my-4 md:my-6" />
 
-                                <hr className="my-4 border-slate-300" />
+                            <div>
 
+                                <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-5">
+                                    Contact Information
+                                </h3>
 
+                                <div className="space-y-3 md:space-y-4">
 
-                                <p className="font-bold mt-5 text-lg md:text-xl">
-                                    Facilities
-                                </p>
+                                    <div className="border text-sm rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
+                                        <p>
+                                            <strong>Phone:</strong> {universityA.contact.phone}
+                                        </p>
+                                    </div>
 
+                                    <div className="border text-sm rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
+                                        <p>
+                                            <strong>Email:</strong> {universityA.contact.email}
+                                        </p>
+                                    </div>
 
-                                <ul className="list-disc ml-5 md:ml-6 space-y-5">
+                                    <div className="border text-sm rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
+                                        <p className="font-semibold mb-2">
+                                            Website
+                                        </p>
 
-                                    {universityA.facilities.map((facility, index) => (
+                                        <a
+                                            href={universityA.contact.website}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-600 underline break-all"
+                                        >
+                                            {universityA.contact.website}
+                                        </a>
+                                    </div>
 
-                                        <li key={index} className="mb-3">
-
-                                            <h4 className="font-semibold">
-                                                {facility.name}
-                                            </h4>
-
-
-                                            <p className="text-gray-600">
-                                                {facility.description}
-                                            </p>
-
-                                        </li>
-
-                                    ))}
-
-                                </ul>
-
-
-                                <hr className="my-4 border-slate-300" />
-
-
-                                <p>
-                                    <strong>Phone:</strong> {universityA.contact.phone}
-                                </p>
-
-
-                                <hr className="my-4 border-slate-300" />
-
-
-                                <p>
-                                    <strong>Email:</strong> {universityA.contact.email}
-                                </p>
-
-
-                                <hr className="my-4 border-slate-300" />
-
-
-                                <p>
-                                    <strong>Website:</strong>{" "}
-                                    <a
-                                        href={universityA.contact.website}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-600 underline break-all"
-                                    >
-                                        {universityA.contact.website}
-                                    </a>
-                                </p>
-
+                                </div>
 
                             </div>
 
                         </div>
 
+                    </div>
 
+                    <div className="bg-white rounded-2xl shadow-xl overflow-hidden border">
 
-                        
+                        <img
+                            src={universityB.image}
+                            alt={universityB.name}
+                            className="w-full h-40 md:h-80 object-cover"
+                        />
 
+                        <div className="p-6">
 
-                        <div className="shadow-lg rounded-xl border border-slate-200">
+                            <h2 className="text-xl md:text-2xl font-bold text-center">
+                                {universityB.name}
+                            </h2>
 
+                            <hr className="my-4 md:my-6" />
 
-                            <img
-                                src={universityB.image}
-                                alt={universityB.name}
-                                className="h-60 md:h-80 w-full object-cover rounded-xl"
-                            />
+                            <div>
 
+                                <h3 className="md:text-xl font-bold mb-3">
+                                    Campus
+                                </h3>
 
-                            <div className="p-4 md:p-6 space-y-8">
+                                <ul className="list-disc text-sm md:text-lg ml-6 space-y-2">
 
+                                    {universityB.campus.map((campus, index) => (
+                                        <li key={index}>
+                                            {campus}
+                                        </li>
+                                    ))}
 
-                                <h2 className="font-bold text-xl md:text-2xl mt-6">
-                                    {universityB.name}
-                                </h2>
+                                </ul>
 
+                            </div>
 
-                                <p className="mt-4">
-                                    {universityB.introduction}
-                                </p>
+                            <hr className="my-4 md:my-6" />
 
+                            <div>
 
-                                <hr className="my-4 border-slate-300" />
-                            
-                                                            <div className="mt-6">
+                                <h3 className="md:text-xl font-bold mb-5">
+                                    Fee Structure
+                                </h3>
 
-                                    <h3 className="font-bold text-lg md:text-xl mb-2">
-                                        Campus
-                                    </h3>
-
-
-                                    <ul className="list-disc ml-5 md:ml-6 space-y-2">
-
-                                        {universityB.campus.map((campus, index) => (
-                                            <li key={index}>
-                                                {campus}
-                                            </li>
-                                        ))}
-
-                                    </ul>
-
-                                </div>
-
-
-
-                                <hr className="my-4 border-slate-300" />
-
-
-
-                                <div className="mt-6">
-
-                                    <h3 className="font-bold text-lg md:text-xl mb-2">
-                                        Address
-                                    </h3>
-
-
-                                    <ul className="list-disc ml-5 md:ml-6 space-y-2">
-
-                                        {universityB.address.map((address, index) => (
-                                            <li key={index}>
-                                                {address}
-                                            </li>
-                                        ))}
-
-                                    </ul>
-
-                                </div>
-
-
-
-                                <hr className="my-4 border-slate-300" />
-
-
-
-                                <div className="mt-3">
-
-                                    <strong className="text-lg md:text-xl">
-                                        Fee:
-                                    </strong>
-
+                                <div className="space-y-2 md:space-y-4">
 
                                     {universityB.fee.map((item, index) => (
 
-                                        <div 
+                                        <div
                                             key={index}
-                                            className="ml-2 md:ml-4 mt-4 border rounded-lg p-3 md:p-4"
+                                            className="border rounded-xl p-2 md:p-4 bg-slate-50"
                                         >
 
-                                            <p className="font-bold">
+                                            <p className="font-bold md:text-lg">
                                                 {item.category}
                                             </p>
 
-                                            <p>
+                                            <p className="mt-2 text-sm md:text-lg">
                                                 {item.amount}
                                             </p>
 
-                                            <p className="text-sm">
+                                            <p className="text-xs md:text-sm text-slate-600 mt-2">
                                                 {item.note}
                                             </p>
 
@@ -454,35 +350,31 @@ const CompareResult = () => {
 
                                 </div>
 
+                            </div>
 
+                            <hr className="my-4 md:my-6" />
 
-                                <hr className="my-4 border-slate-300" />
+                            <div>
 
+                                <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-5">
+                                    Scholarships
+                                </h3>
 
-
-                                <div className="mt-3">
-
-                                    <strong className="text-lg md:text-xl">
-                                        Scholarships
-                                    </strong>
-
+                                <div className="space-y-6">
 
                                     {universityB.scholarship.map((item, index) => (
 
-                                        <div key={index} className="mt-4 mb-10">
+                                        <div
+                                            key={index}
+                                            className="border rounded-xl p-3 md:p-4 bg-slate-50"
+                                        >
 
-                                            <h3 className="font-bold mb-2">
+                                            <h4 className="font-bold text-sm md:text-lg mb-2">
                                                 {item.title}
-                                            </h3>
+                                            </h4>
 
-
-                                            <p className="mb-2">
+                                            <p className="md:mb-2 text-xs md:text-lg">
                                                 {item.description}
-                                            </p>
-
-
-                                            <p>
-                                                {item.benefit}
                                             </p>
 
                                         </div>
@@ -491,18 +383,16 @@ const CompareResult = () => {
 
                                 </div>
 
+                            </div>
 
+                            <hr className="my-4 md:my-6" />
+                            <div>
 
-                                <hr className="my-4 border-slate-300" />
-
-
-
-                                <p className="font-bold mt-5 text-lg md:text-xl">
+                                <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4">
                                     Best Programs
-                                </p>
+                                </h3>
 
-
-                                <ul className="list-disc ml-5">
+                                <ul className="md:text-lg text-sm list-disc ml-6 space-y-2">
 
                                     {universityB.bestPrograms.map((program, index) => (
 
@@ -514,29 +404,31 @@ const CompareResult = () => {
 
                                 </ul>
 
+                            </div>
+
+                            <hr className="my-4 md:my-6" />
 
 
-                                <hr className="my-4 border-slate-300" />
+                            <div>
 
+                                <h3 className="text-xl font-bold mb-5">
+                                    Undergraduate Programs
+                                </h3>
 
-
-                                <p className="font-bold mt-5 text-lg md:text-xl">
-                                    Undergraduate
-                                </p>
-
-
-                                <div>
+                                <div className="space-y-3 md:space-y-6">
 
                                     {universityB.undergraduate.map((item, index) => (
 
-                                        <div key={index} className="mb-8">
+                                        <div
+                                            key={index}
+                                            className="border rounded-xl p-2 md:p-4 bg-slate-50"
+                                        >
 
-                                            <h3 className="font-bold">
+                                            <h4 className="font-bold md:text-lg mb-3">
                                                 {item.heading}
-                                            </h3>
+                                            </h4>
 
-
-                                            <ul className="list-disc ml-6 mt-2 space-y-2">
+                                            <ul className="list-disc text-sm md:text-lg ml-5 md:ml-6 space-y-2">
 
                                                 {item.programs.map((program, i) => (
 
@@ -554,26 +446,31 @@ const CompareResult = () => {
 
                                 </div>
 
+                            </div>
+
+                            <hr className="my-4 md:my-6" />
 
 
-                                <hr className="my-4 border-slate-300" />
-                                                                <p className="font-bold mt-5 text-lg md:text-xl">
-                                    Graduate
-                                </p>
+                            <div>
 
+                                <h3 className="text-xl font-bold mb-5">
+                                    Graduate Programs
+                                </h3>
 
-                                <div>
+                                <div className="space-y-3 md:space-y-6">
 
                                     {universityB.graduate.map((item, index) => (
 
-                                        <div key={index} className="mb-6">
+                                        <div
+                                            key={index}
+                                            className="border rounded-xl p-2 md:p-4 bg-slate-50"
+                                        >
 
-                                            <h3 className="font-bold">
+                                            <h4 className="font-bold md:text-lg mb-3">
                                                 {item.heading}
-                                            </h3>
+                                            </h4>
 
-
-                                            <ul className="list-disc ml-5 mt-2">
+                                            <ul className="list-disc text-sm md:text-lg ml-5 md:ml-6 space-y-2">
 
                                                 {item.programs.map((program, i) => (
 
@@ -591,98 +488,62 @@ const CompareResult = () => {
 
                                 </div>
 
+                            </div>
+
+                            <hr className="my-4 md:my-6" />
 
 
-                                <hr className="my-4 border-slate-300" />
+                            <div>
 
+                                <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-5">
+                                    Contact Information
+                                </h3>
 
+                                <div className="space-y-3 md:space-y-4">
 
-                                <p className="font-bold mt-5 text-lg md:text-xl">
-                                    Facilities
-                                </p>
+                                    <div className="border text-sm rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
+                                        <p>
+                                            <strong>Phone:</strong> {universityB.contact.phone}
+                                        </p>
+                                    </div>
 
+                                    <div className="border text-sm rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
+                                        <p>
+                                            <strong>Email:</strong> {universityB.contact.email}
+                                        </p>
+                                    </div>
 
-                                <ul className="list-disc ml-5 md:ml-6 space-y-5">
+                                    <div className="border text-sm rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
+                                        <p className="font-semibold mb-2">
+                                            Website
+                                        </p>
 
-                                    {universityB.facilities.map((facility, index) => (
+                                        <a
+                                            href={universityB.contact.website}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-600 underline break-all"
+                                        >
+                                            {universityA.contact.website}
+                                        </a>
+                                    </div>
 
-                                        <li key={index} className="mb-3">
-
-                                            <h4 className="font-semibold">
-                                                {facility.name}
-                                            </h4>
-
-
-                                            <p className="text-gray-600">
-                                                {facility.description}
-                                            </p>
-
-                                        </li>
-
-                                    ))}
-
-                                </ul>
-
-
-
-                                <hr className="my-4 border-slate-300" />
-
-
-
-                                <p>
-                                    <strong>Phone:</strong> {universityB.contact.phone}
-                                </p>
-
-
-
-                                <hr className="my-4 border-slate-300" />
-
-
-
-                                <p>
-                                    <strong>Email:</strong> {universityB.contact.email}
-                                </p>
-
-
-
-                                <hr className="my-4 border-slate-300" />
-
-
-
-                                <p>
-                                    <strong>Website:</strong>{" "}
-                                    <a
-                                        href={universityB.contact.website}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-600 underline break-all"
-                                    >
-                                        {universityB.contact.website}
-                                    </a>
-                                </p>
-
-
-
-                                <hr className="my-4 border-slate-300" />
-
-
+                                </div>
 
                             </div>
 
                         </div>
 
-
                     </div>
 
                 </div>
 
-            )}
+            </div>
 
         </div>
 
     );
 
-}
-
+};
 
 export default CompareResult;

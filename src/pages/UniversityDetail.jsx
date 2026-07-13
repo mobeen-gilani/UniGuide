@@ -117,36 +117,6 @@ const UniversityDetail = () => {
 
 
             </div>
-
-
-
-
-
-    
-
-
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-7">
-
-                Full Address:
-
-            </h2>
-
-
-            <h2 className="text-xl md:text-3xl font-bold mb-4">
-
-                Address:
-
-            </h2>
-
-
-            <p className="leading-7">
-
-                {university.address}
-
-            </p>
-
-
-
             <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-7">
 
                 Best Programs:

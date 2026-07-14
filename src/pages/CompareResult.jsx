@@ -238,13 +238,13 @@ const CompareResult = () => {
                                 <div className="space-y-3 md:space-y-4">
 
                                     <div className="border text-sm rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
-                                        <p>
+                                        <p className="break-words whitespace-normal">
                                             <strong>Phone:</strong> {universityA.contact.phone}
                                         </p>
                                     </div>
 
                                     <div className="border text-xs rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
-                                        <p>
+                                        <p className="break-words whitespace-normal">
                                             <strong>Email:</strong> {universityA.contact.email}
                                         </p>
                                     </div>
@@ -484,13 +484,13 @@ const CompareResult = () => {
                                 <div className="space-y-3 md:space-y-4">
 
                                     <div className="border text-sm rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
-                                        <p>
+                                        <p className="break-words whitespace-normal">
                                             <strong>Phone:</strong> {universityB.contact.phone}
                                         </p>
                                     </div>
 
                                     <div className="border text-xs rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
-                                        <p>
+                                        <p className="break-words whitespace-normal">
                                             <strong>Email:</strong> {universityB.contact.email}
                                         </p>
                                     </div>
@@ -506,7 +506,7 @@ const CompareResult = () => {
                                             rel="noopener noreferrer"
                                             className="text-blue-600 underline break-all"
                                         >
-                                            {universityA.contact.website}
+                                            {universityB.contact.website}
                                         </a>
                                     </div>
 

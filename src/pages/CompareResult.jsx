@@ -133,7 +133,7 @@ const CompareResult = () => {
                                     Best Programs
                                 </h3>
 
-                                <ul className="md:text-lg text-sm list-disc ml-6 space-y-2">
+                                <ul className="md:text-lg text-sm list-disc ml-6 space-y-2  break-words whitespace-normal">
 
                                     {universityA.bestPrograms.map((program, index) => (
 
@@ -164,11 +164,11 @@ const CompareResult = () => {
                                             className="border rounded-xl p-2 md:p-4 bg-slate-50"
                                         >
 
-                                            <h4 className="font-bold md:text-lg mb-3">
+                                            <h4 className="font-bold md:text-lg mb-3  break-words whitespace-normal">
                                                 {item.heading}
                                             </h4>
 
-                                            <ul className="md:text-lg text-sm list-disc ml-6 space-y-2">
+                                            <ul className="md:text-lg text-sm list-disc ml-6 space-y-2  break-words whitespace-normal">
 
                                                 {item.programs.map((program, i) => (
 
@@ -374,7 +374,7 @@ const CompareResult = () => {
                                     Best Programs
                                 </h3>
 
-                                <ul className="md:text-lg text-sm list-disc ml-6 space-y-2">
+                                <ul className="md:text-lg text-sm list-disc ml-6 space-y-2  break-words whitespace-normal">
 
                                     {universityB.bestPrograms.map((program, index) => (
 
@@ -448,11 +448,11 @@ const CompareResult = () => {
                                             className="border rounded-xl p-2 md:p-4 bg-slate-50"
                                         >
 
-                                            <h4 className="font-bold md:text-lg mb-3">
+                                            <h4 className="font-bold md:text-lg mb-3  break-words whitespace-normal">
                                                 {item.heading}
                                             </h4>
 
-                                            <ul className="list-disc text-xs md:text-lg ml-5 md:ml-6 space-y-2">
+                                            <ul className="list-disc text-xs md:text-lg ml-5 md:ml-6 space-y-2  break-words whitespace-normal">
 
                                                 {item.programs.map((program, i) => (
 

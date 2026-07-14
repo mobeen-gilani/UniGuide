@@ -31,11 +31,7 @@ const CompareResult = () => {
 
                     <div className="bg-white rounded-2xl shadow-xl overflow-hidden border">
 
-                        <img
-                            src={universityA.image}
-                            alt={universityA.name}
-                            className="w-full h-40 md:h-80 object-cover"
-                        />
+                        
 
                         <div className="p-6">
 
@@ -89,9 +85,7 @@ const CompareResult = () => {
                                                 {item.amount}
                                             </p>
 
-                                            <p className="text-xs md:text-sm text-slate-600 mt-2">
-                                                {item.note}
-                                            </p>
+
 
                                         </div>
 
@@ -122,9 +116,7 @@ const CompareResult = () => {
                                                 {item.title}
                                             </h4>
 
-                                            <p className="md:mb-2 text-xs md:text-lg">
-                                                {item.description}
-                                            </p>
+
 
                                         </div>
 
@@ -176,7 +168,7 @@ const CompareResult = () => {
                                                 {item.heading}
                                             </h4>
 
-                                            <ul className="list-disc text-sm md:text-lg ml-5 md:ml-6 space-y-2">
+                                            <ul className="md:text-lg text-sm list-disc ml-6 space-y-2">
 
                                                 {item.programs.map((program, i) => (
 
@@ -216,8 +208,7 @@ const CompareResult = () => {
                                             <h4 className="font-bold md:text-lg mb-3">
                                                 {item.heading}
                                             </h4>
-
-                                            <ul className="list-disc text-sm md:text-lg ml-5 md:ml-6 space-y-2">
+                                            <ul className="md:text-lg text-sm list-disc ml-6 space-y-2">
 
                                                 {item.programs.map((program, i) => (
 
@@ -252,7 +243,7 @@ const CompareResult = () => {
                                         </p>
                                     </div>
 
-                                    <div className="border text-sm rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
+                                    <div className="border text-xs rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
                                         <p>
                                             <strong>Email:</strong> {universityA.contact.email}
                                         </p>
@@ -283,12 +274,7 @@ const CompareResult = () => {
 
                     <div className="bg-white rounded-2xl shadow-xl overflow-hidden border">
 
-                        <img
-                            src={universityB.image}
-                            alt={universityB.name}
-                            className="w-full h-40 md:h-80 object-cover"
-                        />
-
+                        
                         <div className="p-6">
 
                             <h2 className="text-xl md:text-2xl font-bold text-center">
@@ -335,14 +321,12 @@ const CompareResult = () => {
                                             <p className="font-bold md:text-lg">
                                                 {item.category}
                                             </p>
-
-                                            <p className="mt-2 text-sm md:text-lg">
+                                             <p className="mt-2 text-sm md:text-lg">
                                                 {item.amount}
                                             </p>
 
-                                            <p className="text-xs md:text-sm text-slate-600 mt-2">
-                                                {item.note}
-                                            </p>
+
+
 
                                         </div>
 
@@ -373,9 +357,7 @@ const CompareResult = () => {
                                                 {item.title}
                                             </h4>
 
-                                            <p className="md:mb-2 text-xs md:text-lg">
-                                                {item.description}
-                                            </p>
+
 
                                         </div>
 
@@ -411,7 +393,7 @@ const CompareResult = () => {
 
                             <div>
 
-                                <h3 className="text-xl font-bold mb-5">
+                                <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4">
                                     Undergraduate Programs
                                 </h3>
 
@@ -428,7 +410,7 @@ const CompareResult = () => {
                                                 {item.heading}
                                             </h4>
 
-                                            <ul className="list-disc text-sm md:text-lg ml-5 md:ml-6 space-y-2">
+                                            <ul className="list-disc text-xs md:text-lg ml-5 md:ml-6 space-y-2">
 
                                                 {item.programs.map((program, i) => (
 
@@ -470,7 +452,7 @@ const CompareResult = () => {
                                                 {item.heading}
                                             </h4>
 
-                                            <ul className="list-disc text-sm md:text-lg ml-5 md:ml-6 space-y-2">
+                                            <ul className="list-disc text-xs md:text-lg ml-5 md:ml-6 space-y-2">
 
                                                 {item.programs.map((program, i) => (
 
@@ -507,7 +489,7 @@ const CompareResult = () => {
                                         </p>
                                     </div>
 
-                                    <div className="border text-sm rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
+                                    <div className="border text-xs rounded-xl p-2 md:text-lg md:p-4 bg-slate-50">
                                         <p>
                                             <strong>Email:</strong> {universityB.contact.email}
                                         </p>

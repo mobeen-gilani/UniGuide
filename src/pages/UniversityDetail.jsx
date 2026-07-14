@@ -170,64 +170,40 @@ const UniversityDetail = () => {
 
                     {university.undergraduate?.map((section) => (
 
-
-
                         <div
 
                             key={section.heading}
 
                             className="bg-white rounded-2xl shadow-lg border border-gray-200 p-4 md:p-6"
-
                         >
-
-
-
-
                             <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-5 border-b pb-3">
-
 
                                 🎓 {section.heading}
 
-
                             </h3>
                             <div className="flex flex-wrap gap-3">
-
-
                                 {section.programs?.map((program) => (
                                     <span
-
                                         key={program}
 
                                         className="bg-slate-100 text-slate-700 px-4 py-2 rounded-full font-medium hover:bg-slate-200 transition text-sm md:text-base"
-
                                     >
                                         {program}
 
                                     </span>
-
                                 ))}
-
                             </div>
-
                         </div>
-
                     ))}
-
                 </div>
-
             </div>
-
             <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-5 mt-10 pb-4 md:pb-6">
-
                     Graduate Programs:
-
                 </h2>
-
                 <div className="space-y-6">
                     {university.graduate?.map((section) => (
-                        <div
-
+                       <div
                             key={section.heading}
                             className="bg-white rounded-2xl shadow-lg border border-gray-200 p-4 md:p-6"
                         >
@@ -317,7 +293,6 @@ const UniversityDetail = () => {
                     {university.scholarship?.map((item, index) => (
                         <div
                             className="py-3"
-
                             key={index}
                         >
                             <h3 className="font-bold text-lg md:text-xl">
@@ -336,7 +311,6 @@ const UniversityDetail = () => {
             </div>
             <div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-5 mt-10">
-
                     Facilities:
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
@@ -402,7 +376,6 @@ const UniversityDetail = () => {
                                 <td className="font-semibold px-5 py-4">
                                     📍 Address
                                 </td>
-
                                 <td className="px-5 py-4 md:text-lg text-sm">
                                     {university.contact?.address}
                                 </td>
